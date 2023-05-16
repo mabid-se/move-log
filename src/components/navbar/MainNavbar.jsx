@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as TruckLogo } from "../assets/images/truck.svg";
+
 const MainNavbar = () => {
   return (
     <>

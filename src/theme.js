@@ -2,18 +2,23 @@ import { createTheme } from "@mui/material";
 
 export const myTheme = createTheme({
   palette: {
-    black: { 400: "#A9A9A9", 600: "#4D4D4D", 800: "#272727", 900: "#000000" },
-    white: {
-      400: "#D9D9D9",
-      600: "#CCCCCC",
-      700: "#F3F3F3",
-      800: "#F4F4F4",
-      900: "#FFFFFF",
+    black: {
+      one: "#A9A9A9",
+      two: "#4D4D4D",
+      three: "#272727",
+      four: "#000000",
     },
-    yellow: { 400: "#FFDA56", 600: "#F6B426", 800: "#FFB629", 900: "#FFB82B" },
-    blue: { 600: "#1C1F35", 900: "#091242" },
-    blueTrans: { 400: "#041c3780", 600: "#09124240" },
-    grey: { 400: "#666C89", 600: "#e8e8e880", 800: "#ffffff33" },
+    white: {
+      one: "#D9D9D9",
+      two: "#CCCCCC",
+      three: "#F3F3F3",
+      four: "#FFFFFF",
+    },
+    yellow: { one: "#F6B426", two: "#FFB82B" },
+    blue: { one: "#091242" },
+    grey: {
+      one: "#09124240", //#ffffff33
+    },
   },
 
   typography: {
