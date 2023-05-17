@@ -8,7 +8,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import {
   AppBar,
   Box,
-  Button,
   Container,
   CssBaseline,
   Drawer,
@@ -16,10 +15,6 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-
-// ---| Project Imports |---
-import { useStyles } from "./MainNavbar-styles";
-import { ReactComponent as TruckLogo } from "../../assets/icons/truck.svg";
 import {
   Close,
   Facebook,
@@ -29,10 +24,15 @@ import {
   Twitter,
 } from "@mui/icons-material";
 
+// ---| Project Imports |---
+import { useStyles } from "./MainNavbar-styles";
+import { ReactComponent as TruckLogo } from "../../assets/icons/truck.svg";
+import Button from "../button/Button";
+
 const MainNavbar = (props) => {
   const { window } = props;
   const drawerWidth = "240px";
-  const styleClass = useStyles();
+  const styleClasses = useStyles();
   const location = useLocation();
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -63,7 +63,7 @@ const MainNavbar = (props) => {
         justifyContent="center"
         alignItems="stretch"
         sx={{ py: 12, px: 6 }}
-        className={styleClass.drawerContainer}
+        className={styleClasses.drawerContainer}
       >
         <Grid item>
           <IconButton
@@ -85,21 +85,27 @@ const MainNavbar = (props) => {
           </IconButton>
         </Grid>
         <Grid item my={2}>
-          <NavLink
+          {/* <NavLink
             // onClick={handleOpenModal}
-            className={styleClass.reqQuoteBtnDrawer}
+            className={styleClasses.reqQuoteBtnDrawer}
           >
             request quote
-          </NavLink>
+          </NavLink> */}
+
+          <Button
+            variant="yellow"
+            // onClick={handleOpenModal}
+            btnText="request quote"
+          />
         </Grid>
         {menuItems.map((item) => (
-          <Grid item key={item.name} className={styleClass.drawerItemsCont}>
+          <Grid item key={item.name} className={styleClasses.drawerItemsCont}>
             <NavLink
               to={item.link}
               className={
                 location.pathname === item.link
-                  ? `${styleClass.indDrawerItem} ${styleClass.indDrawerItemActive}`
-                  : styleClass.indDrawerItem
+                  ? `${styleClasses.indDrawerItem} ${styleClasses.indDrawerItemActive}`
+                  : styleClasses.indDrawerItem
               }
             >
               {item.name}
@@ -118,7 +124,7 @@ const MainNavbar = (props) => {
           }}
         >
           {socialItems.map((item) => (
-            <NavLink to={item.link} className={styleClass.indSocialIcon}>
+            <NavLink to={item.link} className={styleClasses.indSocialIcon}>
               {item.icon}
             </NavLink>
           ))}
@@ -143,51 +149,45 @@ const MainNavbar = (props) => {
           >
             <Grid item xs={4} md={2}>
               <NavLink to="/" style={{ textDecoration: "none" }}>
-                <Grid className={styleClass.logoContainer}>
+                <Grid className={styleClasses.logoContainer}>
                   <TruckLogo
                     width="19%"
                     fill="#FFB82B"
                     height="auto"
                     length="auto"
                   />
-                  <Typography variant="h5" className={styleClass.logoText}>
+                  <Typography variant="h5" className={styleClasses.logoText}>
                     MoveLog
                   </Typography>
                 </Grid>
               </NavLink>
             </Grid>
-            <Grid item md={8} display={{ xs: "none", md: "flex" }}>
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                py={3}
-                spacing={4}
-                height="100%"
-              >
-                {menuItems.map((item) => (
-                  <Grid item key={item.name}>
-                    <NavLink
-                      exact
-                      to={item.link}
-                      className={
-                        location.pathname === item.link
-                          ? `${styleClass.indMenuItem} ${styleClass.indMenuItemActive}`
-                          : styleClass.indMenuItem
-                      }
-                    >
-                      {item.name}
-                    </NavLink>
-                  </Grid>
-                ))}
-              </Grid>
+            <Grid
+              item
+              md={8}
+              display={{ xs: "none", md: "flex" }}
+              className={styleClasses.menuItemsContainer}
+            >
+              {menuItems.map((item) => (
+                <NavLink
+                  exact
+                  to={item.link}
+                  key={item.name}
+                  className={
+                    location.pathname === item.link
+                      ? `${styleClasses.indMenuItem} ${styleClasses.indMenuItemActive}`
+                      : styleClasses.indMenuItem
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ))}
             </Grid>
             <Grid
               item
               md={2}
               display={{ xs: "none", md: "flex" }}
-              className={styleClass.reqQuoteContainer}
+              className={styleClasses.reqQuoteContainer}
             >
               <Grid
                 container
@@ -196,7 +196,7 @@ const MainNavbar = (props) => {
                 alignItems="center"
                 height="100%"
               >
-                <NavLink to="/" className={styleClass.reqQuoteText}>
+                <NavLink to="/" className={styleClasses.reqQuoteText}>
                   request quote
                 </NavLink>
               </Grid>

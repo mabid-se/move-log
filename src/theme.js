@@ -15,9 +15,13 @@ export const myTheme = createTheme({
       four: "#FFFFFF",
     },
     yellow: { one: "#F6B426", two: "#FFB82B" },
-    blue: { one: "#091242" },
+    blue: { one: "#1F2A69", two: "#091242" },
     grey: {
       one: "#09124240", //#ffffff33
+    },
+    gradient: {
+      primary:
+        "linear-gradient(94.06deg, #FFB629 -1.21%, #FFDA56 58.66%, #FFD7A6 116.84%)",
     },
   },
 
