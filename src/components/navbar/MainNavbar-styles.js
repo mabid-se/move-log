@@ -1,5 +1,7 @@
+// ---| MUI Imports |---
 import { makeStyles } from "@mui/styles";
 
+// ---| Project Imports |---
 import { myTheme } from "../../theme";
 
 export const useStyles = makeStyles((theme) => ({
@@ -18,10 +20,12 @@ export const useStyles = makeStyles((theme) => ({
     letterSpacing: 1,
   },
   menuItemsContainer: {
-    display: "flex",
+    height: "100%",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    padding: "24px 0",
+    gap: 22,
   },
   indMenuItem: {
     fontFamily: "Rubik",
