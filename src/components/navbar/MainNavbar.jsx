@@ -73,7 +73,7 @@ const MainNavbar = (props) => {
               top: 25,
               right: 25,
               borderRadius: 0,
-              color: "white.four",
+              color: "white.five",
               border: "2px solid",
               borderRadius: 0,
               width: 30,

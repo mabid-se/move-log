@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
     gap: 4,
   },
   logoText: {
-    color: myTheme.palette.white.four,
+    color: myTheme.palette.white.five,
     fontWeight: "medium",
     fontFamily: "Rubik",
     letterSpacing: 1,
@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Rubik",
     fontWeight: "medium",
     textTransform: "capitalize",
-    color: myTheme.palette.white.four,
+    color: myTheme.palette.white.five,
     textDecoration: "none",
     "&:hover": { color: myTheme.palette.yellow.two },
   },
@@ -43,7 +43,7 @@ export const useStyles = makeStyles((theme) => ({
     textUnderlineOffset: "30px",
   },
   reqQuoteContainer: {
-    backgroundColor: myTheme.palette.white.four,
+    backgroundColor: myTheme.palette.white.five,
     cursor: "pointer",
   },
   reqQuoteText: {
@@ -64,11 +64,11 @@ export const useStyles = makeStyles((theme) => ({
     fontWeight: "medium",
     textDecoration: "none",
     textTransform: "capitalize",
-    "&:hover": { background: myTheme.palette.white.four },
+    "&:hover": { background: myTheme.palette.white.five },
   },
   drawerItemsCont: {
     padding: "1.2em 0",
-    color: myTheme.palette.white.four,
+    color: myTheme.palette.white.five,
     borderBottom: "2px solid",
     fontWeight: "medium",
   },
@@ -76,7 +76,7 @@ export const useStyles = makeStyles((theme) => ({
     fontFamily: "Rubik",
     fontWeight: "medium",
     textTransform: "capitalize",
-    color: myTheme.palette.white.four,
+    color: myTheme.palette.white.five,
     textDecoration: "none",
     "&:hover": { color: myTheme.palette.yellow.two },
   },
@@ -93,7 +93,7 @@ export const useStyles = makeStyles((theme) => ({
     gap: 15,
   },
   indSocialIcon: {
-    color: myTheme.palette.white.four,
+    color: myTheme.palette.white.five,
     "&:hover": { color: myTheme.palette.yellow.two },
   },
 }));
